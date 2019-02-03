@@ -4,28 +4,15 @@ project(PatchMatch)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -O3")
 
+include_directories(${PROJECT_SOURCE_DIR}/include)
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/build)
+
 
 
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
-add_library(
-	patch_match	
-	# Matrix2D.h Matrix2D.cpp
-	Matrix2D.h
-	DisparityPlane.h DisparityPlane.cpp
-	PatchMatchBase.h PatchMatchBase.cpp
-	PatchMatch.h PatchMatch.cpp
-	PatchMatchRowColSweep.h PatchMatchRowColSweep.cpp
-	PatchMatchRedBlack.h PatchMatchRedBlack.cpp
-)
 
 
-add_executable(pm pm.cpp)
-target_link_libraries(pm ${OpenCV_LIBS} patch_match)
+add_subdirectory(src)
 
-add_executable(pm_rows_cols_sweep pm_rows_cols_sweep.cpp)
-target_link_libraries(pm_rows_cols_sweep ${OpenCV_LIBS} patch_match)
-
-add_executable(pm_red_black pm_red_black.cpp)
-target_link_libraries(pm_red_black ${OpenCV_LIBS} patch_match)
