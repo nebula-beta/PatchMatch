@@ -1,7 +1,13 @@
 ## Introuction
 PatchMatch is the state-of-the-art stereo match algorithm framework.
 
-Source code for the paper[1] and it's variant is implemented.
+Source code for the paper[1] and it's variant is implemented. The major difference between raw PatchMatch method and it's variants is the propagation way.
+
+
++ raw(the origin propgation way of PatchMatch)
++ rows cols sweep(rows sweep, cols sweep, reverse rows sweep, reverse cols sweep)
++ red black(split pixels to red and black, each turn traverse the red pixels or black ones respectively.
+	
 
 Some experiments results are listed follwing.
 
