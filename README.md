@@ -61,6 +61,8 @@ In this example, weirdly, increasing the window size does not lower the bad erro
 
 The first row is the left and right disparity maps after 3 iterations with window size 11px; and the second row is the disparity maps with window size 31px. Both generate by the raw PatchMatch method.
 
+Apparently, the second row better than the first one in visual, but about the same of the bad error 1.0 rate.
+
 <img src="./docs/Aloe_disp1_11px.png"  width="300" /> <img src="./docs/Aloe_disp5_11px.png"  width="300" />
 
 <img src="./docs/Aloe_disp1_31px.png"  width="300" /> <img src="./docs/Aloe_disp5_31px.png"  width="300" />
