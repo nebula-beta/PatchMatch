@@ -6,7 +6,7 @@ Source code for the paper[1] and it's variant is implemented.
 Some experiments results are listed follwing.
 
 ## Experiments
-<img src="./docs/Aloe_disp1.png"  width="400" /> <img src="./docs/Aloe_disp5.png"  width="400" />
+<img src="./docs/Aloe_disp1_11px.png"  width="300" /> <img src="./docs/Aloe_disp5_11px.png"  width="300" />
 
 We experiment on Aloe image of Middlebury dataset 2006. And the left and right disparity map show above.
 
@@ -56,7 +56,14 @@ The images above show the PatchMatch has post-processing or not, obviously, post
 
 
 ### Experiment of different window size
+	
+In this example, weirdly, increasing the window size does not lower the bad error 1.0 rate. However, increasing the window size but improve the visual effect, just as the below:
 
+The first row is the left and right disparity maps after 3 iterations with window size 11px; and the second row is the disparity maps with window size 31px. Both generate by the raw PatchMatch method.
+
+<img src="./docs/Aloe_disp1_11px.png"  width="300" /> <img src="./docs/Aloe_disp5_11px.png"  width="300" />
+
+<img src="./docs/Aloe_disp1_31px.png"  width="300" /> <img src="./docs/Aloe_disp5_31px.png"  width="300" />
 
 ## Conclusions
 In conclusion, the the propagation way of raw PatchMatch method achieve the best result in all experiments. But, the raw propagation way is sequential implementation, Unable to parallel. And it's variants can be implemented parallel but with slowly bad error 1.0 rate increase, so it some trade off. More analysis can refers to the report.
