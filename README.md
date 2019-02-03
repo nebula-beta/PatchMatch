@@ -5,8 +5,13 @@ Source code for the paper[1] and it's variant is implemented.
 
 Some experiments results are listed follwing.
 
+## Experiments
+<img src="./docs/Aloe_disp1.png"  width="400" /> <img src="./docs/Aloe_disp5.png"  width="400" />
 
-## Experiment of different propagation way
+We experiment on Aloe image of Middlebury dataset 2006. And the left and right disparity map show above.
+
+
+### Experiment of different propagation way
 This experiment explore the the affects of different propagation way of PatchMatch.
 
 
@@ -29,7 +34,7 @@ We can see, raw propagation way is the best(red line), 2 iterations converge; Ro
 
 
 
-## Experiment of different steps of PatchMatch
+### Experiment of different steps of PatchMatch
 	
 This experiment explore the the affects of different steps of PatchMatch.
 Left image is left disparity map comparison and right image is right disparity map comparison.
@@ -50,7 +55,7 @@ The images above show the PatchMatch has post-processing or not, obviously, post
 
 
 
-## Experiment of different window size
+### Experiment of different window size
 
 
 ## Conclusions
