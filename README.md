@@ -1,3 +1,5 @@
+
+[中文文档](https://github.com/nebula-beta/PatchMatch/blob/master/PatchMatch%E4%B8%AD%E6%96%87%E7%89%88%E6%8A%A5%E5%91%8A.pdf)
 ## Introuction
 PatchMatch is the state-of-the-art stereo match algorithm framework.
 
